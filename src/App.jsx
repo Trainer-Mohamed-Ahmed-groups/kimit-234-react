@@ -1,16 +1,29 @@
 import './App.css'
-import Bio from './components/Bio'
-import TodoList from './components/TodoList'
-import About from './views/About'
+import Card from './components/Card'
+import Conditional from './components/Conditional'
+import Rendering from './components/Rendering'
+import Gallery from './views/Gellery'
 
 function App() {
 
   return (
     <>
-      Hello React
-      <About />
-      <Bio />
-      <TodoList />
+      <Card username="Mohamed" gender="Male">
+        <span>Course trainer</span>
+      </Card>
+      <Card username="Gharam" gender="Female">
+        <span>Course trainee</span>
+        <section>This is test section</section>
+      </Card>
+      <Card username="Esraa" gender="Female">
+        <span>Course trainee</span>
+        <footer>This is footer</footer>
+      </Card>
+      <Gallery />
+      <hr />
+      <Conditional />
+      <hr />
+      <Rendering />
     </>
   )
 }
