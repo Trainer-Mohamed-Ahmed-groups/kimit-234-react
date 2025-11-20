@@ -1,10 +1,14 @@
 import { Accordion, Button } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 import { FaHome } from "react-icons/fa";
 
 export default function Contact() {
+    const { t } = useTranslation();
+
     return (
         <div>
-            <h2>Contact</h2>
+            <h2>{t('Contact')}</h2>
+            <h3>{t('Welcome to React')}</h3>
             <Button variant="primary">Primary</Button>
             <FaHome />
             <Accordion defaultActiveKey="0">
