@@ -1,22 +1,20 @@
+import { useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
+import { ThemeContext } from './contexts/ThemeContext';
 import SiteNav from './layout/SiteNav';
-import About from './views/About';
-import Contact from './views/Contact';
 import Home from './views/Home';
-import Reviews from './views/Reviews';
+import Products from './views/Products';
 
 function App() {
+  const theme = useContext(ThemeContext)
+
   return (
-    <div className='text-center'>
+    <div className={theme.theme}>
       <SiteNav />
-
-
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' Component={About} />
-        <Route path='/contact' Component={Contact} />
-        <Route path='/reviews' Component={Reviews} />
+        <Route path="/" Component={Home} />
+        <Route path="/products" Component={Products} />
       </Routes>
     </div>
   )
